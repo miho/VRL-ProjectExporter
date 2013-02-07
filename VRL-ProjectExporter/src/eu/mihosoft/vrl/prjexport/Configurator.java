@@ -16,6 +16,11 @@ import eu.mihosoft.vrl.system.ProjectTemplate;
 import eu.mihosoft.vrl.system.VPluginAPI;
 import eu.mihosoft.vrl.system.VPluginConfigurator;
 import eu.mihosoft.vrl.system.VRLPlugin;
+import eu.mihosoft.vrl.visual.Action;
+import eu.mihosoft.vrl.visual.ActionDelegator;
+import eu.mihosoft.vrl.visual.VAction;
+import eu.mihosoft.vrl.visual.VActionGroup;
+import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Icon;
 
 /**
  *
@@ -80,6 +86,17 @@ public class Configurator extends VPluginConfigurator {
             //
             // vapi.addComponent(MyComponent.class);
             // vapi.addTypeRepresentation(MyType.class);
+            
+            VActionGroup actionGroup = new VActionGroup("Project Exporter");
+            
+            actionGroup.add(new VAction(VERSION_KEY) {
+                @Override
+                public void actionPerformed(ActionEvent e, Object owner) {
+                    System.out.println("Export Project as Source");
+                }
+            });
+            
+            api.addAction(actionGroup, ActionDelegator.TOOL_MENU);
 
         }
     }
