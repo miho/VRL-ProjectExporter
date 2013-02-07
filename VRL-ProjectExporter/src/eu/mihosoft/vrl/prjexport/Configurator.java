@@ -4,7 +4,6 @@
  */
 package eu.mihosoft.vrl.prjexport;
 
-import eu.mihosoft.vrl.io.IOUtil;
 import eu.mihosoft.vrl.io.VJarUtil;
 import eu.mihosoft.vrl.io.VersionInfo;
 import eu.mihosoft.vrl.lang.visual.CompletionUtil;
@@ -12,23 +11,12 @@ import eu.mihosoft.vrl.system.InitPluginAPI;
 import eu.mihosoft.vrl.system.PluginAPI;
 import eu.mihosoft.vrl.system.PluginDependency;
 import eu.mihosoft.vrl.system.PluginIdentifier;
-import eu.mihosoft.vrl.system.ProjectTemplate;
 import eu.mihosoft.vrl.system.VPluginAPI;
 import eu.mihosoft.vrl.system.VPluginConfigurator;
-import eu.mihosoft.vrl.system.VRLPlugin;
-import eu.mihosoft.vrl.visual.Action;
 import eu.mihosoft.vrl.visual.ActionDelegator;
 import eu.mihosoft.vrl.visual.VAction;
 import eu.mihosoft.vrl.visual.VActionGroup;
 import java.awt.event.ActionEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.Icon;
 
 /**
  *
