@@ -85,7 +85,6 @@ public class Configurator extends VPluginConfigurator {
             });
             
             api.addAction(actionGroup, ActionDelegator.TOOL_MENU);
-
         }
     }
 
