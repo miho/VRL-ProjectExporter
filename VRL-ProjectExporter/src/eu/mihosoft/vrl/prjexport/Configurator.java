@@ -89,7 +89,7 @@ public class Configurator extends VPluginConfigurator {
             
             VActionGroup actionGroup = new VActionGroup("Project Exporter");
             
-            actionGroup.add(new VAction(VERSION_KEY) {
+            actionGroup.add(new VAction("Export Project as Source") {
                 @Override
                 public void actionPerformed(ActionEvent e, Object owner) {
                     System.out.println("Export Project as Source");
